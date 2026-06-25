@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0">
+    <title>Mikonos Luthier - Galería</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+<body>
+
+    <!-- Boton WhatsApp -->
+    <a href="https://wa.me/5455545" class="btn-wsp" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal para imagen ampliada -->
+    <div class="modal" id="modal">
+        <div class="contenido-modal">
+            <img src="" alt="" class="img-modal" id="img-modal">
+        </div>
+        <div class="modal-btn" id="modal-btn">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </div>
+    </div>
+
+    <!-- Boton subir -->
+    <div id="button-up">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header-principal">
+        <nav class="nav-principal contenedor-flex">
+
+            <span class="icon-menu" id="btnMenu"><i class="fas fa-align-justify"></i></span>
+
+            <div class="contenedor-logo">
+                <img src="img/logo.png" alt="Mikonos Luthier" class="logo-img">
+                <h1 class="logo"><a href="index.html" class="logo-link">Mikonos Luthier</a></h1>
+            </div>
+
+            <ul class="menu" id="menu">
+                <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
+                <li class="menu-item"><a href="nosotros.html" class="menu-link">Nosotros</a></li>
+                <li class="menu-item"><a href="galeria.html" class="menu-link menu-link_select">Galería</a></li>
+                <li class="menu-item"><a href="tienda.html" class="menu-link">Tienda</a></li>
+                <li class="menu-item"><a href="contacto.html" class="menu-link">Contacto</a></li>
+            </ul>
+
+            <div class="social-icon">
+                <a href="#" class="social-icon_link"><span><i class="fab fa-facebook-square"></i></span></a>
+                <a href="https://www.instagram.com/lmikonos/" class="social-icon_link"><span><i class="fab fa-instagram-square"></i></span></a>
+                <a href="https://www.youtube.com/@luismicone5555" class="social-icon_link"><span><i class="fab fa-youtube"></i></span></a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- ========== MAIN ========== -->
+    <main class="main">
+
+        <section class="banner">
+            <img src="img/banner-galeria.jpg" alt="Galeria de instrumentos" class="img-banner">
+            <div class="contenido-banner">
+                Galería de Instrumentos
+            </div>
+        </section>
+
+        <!-- Filtro de galeria -->
+        <section class="grupo galeria-filtros">
+            <div class="contenedor">
+                <div class="filtros-botones">
+                    <button class="btn-filtro btn-filtro-activo" data-filtro="todos">Todos</button>
+                    <button class="btn-filtro" data-filtro="guitarra">Guitarras</button>
+                    <button class="btn-filtro" data-filtro="charango">Charangos</button>
+                    <button class="btn-filtro" data-filtro="ronroco">Ronrocos</button>
+                    <button class="btn-filtro" data-filtro="cuatro">Cuatros</button>
+                    <button class="btn-filtro" data-filtro="proceso">Proceso</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de imagenes -->
+        <section class="grupo galeria">
+            <h2 class="titulo-grupo">Nuestra Galería</h2>
+            <div class="contenedor contenedor-flex">
+
+                <div class="columna columna-50-25" data-categoria="guitarra">
+                    <img src="img/galeria/guitarra1.jpg" alt="Guitarra clasica artesanal" class="img-galeria img-galeria-grande">
+                    <img src="img/galeria/guitarra2.jpg" alt="Detalle de roseta de guitarra" class="img-galeria img-galeria-chica">
+                </div>
+
+                <div class="columna columna-50-25" data-categoria="charango">
+                    <img src="img/galeria/charango1.jpg" alt="Charango artesanal" class="img-galeria img-galeria-chica">
+                    <img src="img/galeria/charango2.jpg" alt="Charango detalle de construccion" class="img-galeria img-galeria-grande">
+                </div>
+
+                <div class="columna columna-50-25" data-categoria="ronroco">
+                    <img src="img/galeria/ronroco1.jpg" alt="Ronroco artesanal" class="img-galeria img-galeria-grande">
+                    <img src="img/galeria/ronroco2.jpg" alt="Ronroco detalle de aros" class="img-galeria img-galeria-chica">
+                </div>
+
+                <div class="columna columna-50-25" data-categoria="cuatro">
+                    <img src="img/galeria/cuatro1.jpg" alt="Cuatro artesanal" class="img-galeria img-galeria-chica">
+                    <img src="img/galeria/cuatro2.jpg" alt="Cuatro detalle de headstock" class="img-galeria img-galeria-grande">
+                </div>
+
+                <div class="columna columna-50-25" data-categoria="guitarra">
+                    <img src="img/galeria/guitarra-electrica1.jpg" alt="Guitarra electrica artesanal" class="img-galeria img-galeria-grande">
+                    <img src="img/galeria/guitarra-electrica2.jpg" alt="Detalle de guitarra electrica" class="img-galeria img-galeria-chica">
+                </div>
+
+                <div class="columna columna-50-25" data-categoria="proceso">
+                    <img src="img/galeria/proceso1.jpg" alt="Tallado de tapa" class="img-galeria img-galeria-chica">
+                    <img src="img/galeria/proceso2.jpg" alt="Encolado del instrumento" class="img-galeria img-galeria-grande">
+                </div>
+
+                <div class="columna columna-50-25" data-categoria="proceso">
+                    <img src="img/galeria/proceso3.jpg" alt="Barnizado del instrumento" class="img-galeria img-galeria-grande">
+                    <img src="img/galeria/proceso4.jpg" alt="Detalle de calibracion" class="img-galeria img-galeria-chica">
+                </div>
+
+                <div class="columna columna-50-25" data-categoria="charango">
+                    <img src="img/galeria/charango3.jpg" alt="Charango montado" class="img-galeria img-galeria-chica">
+                    <img src="img/galeria/ronroco3.jpg" alt="Ronroco terminado" class="img-galeria img-galeria-grande">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Videos del canal -->
+       <section class="grupo grupo-video">
+    <h2 class="titulo-grupo">Videos del Taller</h2>
+    <p class="subtitulo-grupo">Visita nuestro
+       <a href="https://www.youtube.com/@luismicone5555" target="_blank"
+          class="link-youtube">canal de YouTube</a> para mas contenido
+    </p>
+    <div class="contenedor contenedor-flex">
+
+        <!-- VIDEO 1 -->
+        <div class="columna columna-50">
+            <a href="https://www.youtube.com/watch?v=M98B52FHsnw"
+               target="_blank"
+               class="video-link">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/M98B52FHsnw/hqdefault.jpg"
+                         alt="Construccion de guitarra clasica"
+                         class="video-thumb-img">
+                    <div class="video-play-btn">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <p class="video-play-text">Ver en YouTube</p>
+                </div>
+            </a>
+            <p class="video-titulo">Construcción de una guitarra clasica</p>
+        </div>
+
+        <!-- VIDEO 2 -->
+        <div class="columna columna-50">
+            <a href="https://www.youtube.com/watch?v=n8qS2PLIVgY"
+               target="_blank"
+               class="video-link">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/n8qS2PLIVgY/hqdefault.jpg"
+                         alt="Taller de charangos"
+                         class="video-thumb-img">
+                    <div class="video-play-btn">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <p class="video-play-text">Ver en YouTube</p>
+                </div>
+            </a>
+            <p class="video-titulo">Proceso artesanal del charango</p>
+        </div>
+
+    </div>
+</section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-principal">
+        <div class="contenedor contenedor-flex">
+            <div class="columna columna-33">
+                <h2 class="titulo-columna">Mikonos Luthier</h2>
+                <p class="desc-columna">Instrumentos de cuerdas artesanales: guitarras, charangos, ronrocos, cuatros. Acusticos y electricos. Pedidos personalizados.</p>
+            </div>
+
+            <div class="columna columna-33">
+                <h2 class="titulo-columna">Contactanos</h2>
+                <p class="desc-columna"><i class="icon-iphone fas fa-phone"></i> +1 4523-1114</p>
+                <p class="desc-columna"><i class="icon-iphone fas fa-whatsapp"></i> +1 154546565</p>
+                <p class="desc-columna"><i class="icon-iphone fas fa-envelope"></i> lmikonos@yahoo.com</p>
+            </div>
+
+            <div class="columna columna-33">
+                <h2 class="titulo-columna">Seguinos</h2>
+                <p class="desc-columna"><a href="" class="icon-facebook"><i class="icon-facebook fab fa-facebook-square"></i> Seguinos</a></p>
+                <p class="desc-columna"><a href="https://www.instagram.com/lmikonos/" class="icon-instagram"><i class="icon-instagram fab fa-instagram-square"></i> Seguinos</a></p>
+                <p class="desc-columna"><a href="https://www.youtube.com/@luismicone5555" class="icon-youtube"><i class="icon-youtube fab fa-youtube"></i> Canal YouTube</a></p>
+            </div>
+        </div>
+
+        <div class="copy"><i class="fa fa-copyright"></i> Copyright - 2026 Mikonos Luthier</div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/galeria-filtros.js"></script>
+    <script src="js/button-up.js"></script>
+
+</body>
+</html>

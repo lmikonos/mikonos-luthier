@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0">
+    <title>Mikonos Luthier - Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+    <a href="https://wa.me/5455545" class="btn-wsp" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <div id="button-up">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header-principal">
+        <nav class="nav-principal contenedor-flex">
+
+            <span class="icon-menu" id="btnMenu"><i class="fas fa-align-justify"></i></span>
+
+            <div class="contenedor-logo">
+                <img src="img/logo.png" alt="Mikonos Luthier" class="logo-img">
+                <h1 class="logo"><a href="index.html" class="logo-link">Mikonos Luthier</a></h1>
+            </div>
+
+            <ul class="menu" id="menu">
+                <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
+                <li class="menu-item"><a href="nosotros.html" class="menu-link">Nosotros</a></li>
+                <li class="menu-item"><a href="galeria.html" class="menu-link">Galeria</a></li>
+                <li class="menu-item"><a href="tienda.html" class="menu-link">Tienda</a></li>
+                <li class="menu-item"><a href="contacto.html" class="menu-link menu-link_select">Contacto</a></li>
+            </ul>
+
+            <div class="social-icon">
+                <a href="https://www.facebook.com/TU_PAGINA" target="_blank" class="social-icon_link"><span><i class="fab fa-facebook-square"></i></span></a>
+                <a href="https://www.instagram.com/lmikonos/" target="_blank" class="social-icon_link"><span><i class="fab fa-instagram-square"></i></span></a>
+                <a href="https://www.youtube.com/@luismicone5555" target="_blank" class="social-icon_link"><span><i class="fab fa-youtube"></i></span></a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- ========== MAIN ========== -->
+    <main class="main">
+
+        <section class="banner">
+            <img src="img/banner-contacto.jpg" alt="Contacto Mikonos Luthier" class="img-banner">
+            <div class="contenido-banner">Hace tu pedido o consulta</div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section class="grupo grupo-contacto">
+            <h2 class="titulo-grupo">Formulario de Contacto</h2>
+            <div class="contenedor contenedor-flex">
+
+                <div class="columna columna-50">
+                    <form class="formulario" action="https://formsubmit.co/lmikonos@yahoo.com" method="POST">
+
+                        <!-- Configuracion FormSubmit -->
+						
+                        <input type="hidden" name="_subject" value="Nueva consulta desde Mikonos Luthier">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+						
+						 <!-- <input type="hidden" name="_next" value="gracias.html"> -->
+             						
+						<input type="hidden" name="_next" value="https://lmikonos.github.io/mikonos-luthier/gracias.html">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="campo-form">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre" required>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="Email" placeholder="tu@email.com" required>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="telefono">Telefono / WhatsApp</label>
+                            <input type="tel" id="telefono" name="Telefono" placeholder="+54 11 1234-5678">
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="tipo-consulta">Tipo de consulta</label>
+                            <select id="tipo-consulta" name="Tipo_de_consulta" required>
+                                <option value="">-- Selecciona --</option>
+                                <option value="Pedido de instrumento">Pedido de instrumento</option>
+                                <option value="Instrumento personalizado">Instrumento personalizado</option>
+                                <option value="Consulta por productos de tienda">Consulta por productos de tienda</option>
+                                <option value="Herramientas y partes para luthier">Herramientas y partes para luthier</option>
+                                <option value="Reparacion / Restauracion">Reparacion / Restauracion</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-form campo-form-oculto" id="campo-instrumento">
+                            <label for="instrumento">Instrumento de interes</label>
+                            <select id="instrumento" name="Instrumento">
+                                <option value="">-- Selecciona --</option>
+                                <option value="Guitarra clasica">Guitarra clasica</option>
+                                <option value="Guitarra electrica">Guitarra electrica</option>
+                                <option value="Charango">Charango</option>
+                                <option value="Charango electrico">Charango electrico</option>
+                                <option value="Ronroco">Ronroco</option>
+                                <option value="Cuatro">Cuatro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-form campo-form-oculto" id="campo-maderas">
+                            <label>Preferencia de maderas (opcional)</label>
+                            <div class="checkbox-grupo">
+                                <label><input type="checkbox" name="Maderas" value="Abeto"> Abeto</label>
+                                <label><input type="checkbox" name="Maderas" value="Cedro"> Cedro</label>
+                                <label><input type="checkbox" name="Maderas" value="Palosanto"> Palosanto</label>
+                                <label><input type="checkbox" name="Maderas" value="Nogal"> Nogal</label>
+                                <label><input type="checkbox" name="Maderas" value="Arce"> Arce</label>
+                                <label><input type="checkbox" name="Maderas" value="Ebano"> Ebano</label>
+                            </div>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="Mensaje" rows="6" placeholder="Contanos sobre tu proyecto o consulta..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-enviar">Enviar consulta</button>
+
+                    </form>
+                </div>
+
+                <div class="columna columna-50">
+                    <div class="info-contacto">
+                        <h3 class="info-titulo">Datos de contacto</h3>
+                        <p class="info-item"><i class="fas fa-map-marker-alt"></i> Direccion del taller (actualizar)</p>
+                        <p class="info-item"><i class="fas fa-phone"></i> +1 4523-1114</p>
+                        <p class="info-item"><i class="fab fa-whatsapp"></i> +1 154546565</p>
+                        <p class="info-item"><i class="fas fa-envelope"></i> lmikonos@yahoo.com</p>
+
+                        <h3 class="info-titulo">Horarios de atencion</h3>
+                        <p class="info-item">Lunes a Viernes: 9:00 - 18:00</p>
+                        <p class="info-item">Sabados: 10:00 - 14:00</p>
+                        <p class="info-item">Domingos: Cerrado</p>
+
+                        <h3 class="info-titulo">Redes sociales</h3>
+                        <div class="info-redes">
+                            <a href="https://www.facebook.com/TU_PAGINA" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                            <a href="https://www.instagram.com/lmikonos/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+                            <a href="https://ig.me/m/lmikonos" target="_blank"><i class="fab fa-instagram"></i> Mensaje directo</a>
+                            <a href="https://www.youtube.com/@luismicone5555" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-principal">
+        <div class="contenedor contenedor-flex">
+            <div class="columna columna-33">
+                <h2 class="titulo-columna">Mikonos Luthier</h2>
+                <p class="desc-columna">Instrumentos de cuerdas artesanales: guitarras, charangos, ronrocos, cuatros. Acusticos y electricos. Pedidos personalizados.</p>
+            </div>
+
+            <div class="columna columna-33">
+                <h2 class="titulo-columna">Contactanos</h2>
+                <p class="desc-columna"><i class="icon-iphone fas fa-phone"></i> +1 4523-1114</p>
+                <p class="desc-columna"><i class="icon-iphone fas fa-whatsapp"></i> +1 154546565</p>
+                <p class="desc-columna"><i class="icon-iphone fas fa-envelope"></i> lmikonos@yahoo.com</p>
+            </div>
+
+            <div class="columna columna-33">
+                <h2 class="titulo-columna">Seguinos</h2>
+                <p class="desc-columna"><a href="https://www.facebook.com/TU_PAGINA" target="_blank" class="icon-facebook"><i class="icon-facebook fab fa-facebook-square"></i> Seguinos</a></p>
+                <p class="desc-columna"><a href="https://www.instagram.com/lmikonos/" target="_blank" class="icon-instagram"><i class="icon-instagram fab fa-instagram-square"></i> Seguinos</a></p>
+                <p class="desc-columna"><a href="https://www.youtube.com/@luismicone5555" target="_blank" class="icon-youtube"><i class="icon-youtube fab fa-youtube"></i> Canal YouTube</a></p>
+            </div>
+        </div>
+
+        <div class="copy"><i class="fa fa-copyright"></i> Copyright - 2026 Mikonos Luthier</div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/contacto.js"></script>
+    <script src="js/button-up.js"></script>
+
+</body>
+</html>

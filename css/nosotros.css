@@ -1,0 +1,78 @@
+.nuestro-equipo .titulo-grupo {
+    font-size: 36px;
+}
+
+.nuestro-equipo .contenedor-flex {
+    padding: 10px;
+    align-items: flex-start;
+}
+
+.nuestro-equipo .nuestro-equipo-titulo {
+    padding: 10px;
+    padding-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    color: var(--acento);
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nuestro-equipo .nuestro-equipo-img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border: 4px solid var(--acento);
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.nuestro-equipo .desc-nuestro-equipo {
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--texto-muted);
+    padding: 0 10px;
+}
+
+/* --- Media Queries --- */
+@media screen and (min-width: 480px) {
+    .nuestro-equipo .nuestro-equipo-titulo {
+        font-size: 20px;
+    }
+    .nuestro-equipo .nuestro-equipo-img {
+        width: 140px;
+        height: 140px;
+    }
+    .nuestro-equipo .desc-nuestro-equipo {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nuestro-equipo .nuestro-equipo-titulo {
+        font-size: 24px;
+    }
+    .nuestro-equipo .nuestro-equipo-img {
+        width: 180px;
+        height: 180px;
+    }
+    .nuestro-equipo .desc-nuestro-equipo {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nuestro-equipo .nuestro-equipo-titulo {
+        font-size: 28px;
+    }
+    .nuestro-equipo .nuestro-equipo-img {
+        width: 200px;
+        height: 200px;
+    }
+    .nuestro-equipo .desc-nuestro-equipo {
+        font-size: 16px;
+    }
+}

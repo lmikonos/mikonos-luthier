@@ -1,0 +1,151 @@
+/* ===================== FILTROS ===================== */
+.galeria-filtros {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.filtros-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-filtro {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--acento);
+    color: var(--acento);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-filtro:hover {
+    background: var(--acento);
+    color: var(--texto-claro);
+}
+
+.btn-filtro-activo {
+    background: var(--acento);
+    color: var(--texto-claro);
+}
+
+/* ===================== GALERIA ===================== */
+.galeria {
+    margin-top: 15px;
+}
+
+.galeria .titulo-grupo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.galeria .contenedor {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
+
+.img-galeria {
+    object-fit: cover;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.img-galeria:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.img-galeria-grande {
+    height: 400px;
+}
+
+.img-galeria-chica {
+    height: 200px;
+}
+
+/* Ocultar elementos filtrados */
+.columna-hidden {
+    display: none;
+}
+
+/* ===================== MODAL ===================== */
+.modal {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.92);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    display: none;
+}
+
+.contenido-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.img-modal {
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 3px solid var(--acento);
+    box-shadow: 0px 0px 30px rgba(200, 148, 74, 0.3);
+}
+
+.modal-btn {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: color 0.5s ease;
+    z-index: 3100;
+}
+
+.modal-btn:hover {
+    color: var(--acento);
+}
+
+/* ===================== MEDIA QUERIES GALERIA ===================== */
+@media screen and (min-width: 480px) {
+    .img-galeria-grande {
+        height: 250px;
+    }
+    .img-galeria-chica {
+        height: 130px;
+    }
+    .galeria .contenedor {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .img-galeria-grande {
+        height: 320px;
+    }
+    .img-galeria-chica {
+        height: 160px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .img-galeria-grande {
+        height: 400px;
+    }
+    .img-galeria-chica {
+        height: 200px;
+    }
+}
