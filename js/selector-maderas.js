@@ -59,3 +59,23 @@ document.querySelectorAll('.select-madera').forEach(function(select) {
         }
     });
 });
+// Boton "Consultar este diseño"
+var btnConsultar = document.getElementById('btn-consultar');
+if (btnConsultar) {
+    btnConsultar.addEventListener('click', function() {
+        var tapa = document.getElementById('select-tapa').value;
+        var fondo = document.getElementById('select-fondo').value;
+        var mango = document.getElementById('select-mango').value;
+        var diapason = document.getElementById('select-diapason').value;
+
+        var params = [];
+        params.push('tipo=pedido-personalizado');
+
+        if (tapa) params.push('tapa=' + encodeURIComponent(tapa));
+        if (fondo) params.push('fondo=' + encodeURIComponent(fondo));
+        if (mango) params.push('mango=' + encodeURIComponent(mango));
+        if (diapason) params.push('diapason=' + encodeURIComponent(diapason));
+
+        window.location.href = 'contacto.html?' + params.join('&');
+    });
+}
