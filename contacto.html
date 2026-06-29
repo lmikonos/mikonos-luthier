@@ -62,7 +62,7 @@
             <div class="contenedor contenedor-flex">
 
                 <div class="columna columna-50">
-                    <form class="formulario" action="https://formsubmit.co/e33834c282adc46a594ea7d0bcab1332" method="POST">
+                    <form class="formulario" action="https://formsubmit.co/lmikonos@yahoo.com" method="POST">
 
                         <!-- Configuracion FormSubmit -->
 						
@@ -195,6 +195,46 @@
     <script src="js/menu.js"></script>
     <script src="js/contacto.js"></script>
     <script src="js/button-up.js"></script>
+	
+	
+	<script>
+    (function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.has('tipo')) return;
+
+        var tipoSelect = document.getElementById('tipo-consulta');
+        var tipoValor = urlParams.get('tipo');
+        if (tipoSelect && tipoValor) {
+            tipoSelect.value = tipoValor;
+            tipoSelect.dispatchEvent(new Event('change'));
+        }
+
+        var mensaje = 'Hola! Quiero consultar por un instrumento personalizado con las siguientes maderas:\n\n';
+        var partes = {
+            tapa: 'Tapa armonica',
+            fondo: 'Fondo y aros',
+            mango: 'Mango',
+            diapason: 'Diapason'
+        };
+
+        var hayMaderas = false;
+        for (var parte in partes) {
+            var valor = urlParams.get(parte);
+            if (valor) {
+                mensaje += '- ' + partes[parte] + ': ' + valor + '\n';
+                hayMaderas = true;
+            }
+        }
+
+        if (hayMaderas) {
+            mensaje += '\nDesde el selector de maderas de la pagina principal.';
+            var mensajeField = document.getElementById('mensaje');
+            if (mensajeField) mensajeField.value = mensaje;
+        }
+    })();
+</script>
+	
+	
 
 </body>
 </html>
